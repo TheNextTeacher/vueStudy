@@ -3,7 +3,7 @@
     <a-layout-sider v-model="collapsed" :trigger="null" collapsible>
       <div class="logo" />
       <a-menu theme="dark" mode="inline" :default-selected-keys="['1']">
-        <a-menu-item key="1">
+        <a-menu-item key="1" style="margin-top: 0px">
           <a-icon type="user" />
           <span>nav 1</span>
         </a-menu-item>
@@ -19,22 +19,45 @@
     </a-layout-sider>
     <a-layout>
       <a-layout-header style="background: #fff; padding: 0">
-        <a-icon
-          class="trigger"
-          :type="collapsed ? 'menu-unfold' : 'menu-fold'"
-          @click="() => (collapsed = !collapsed)"
-        />
+        <a-menu
+          theme="dark"
+          mode="horizontal"
+          :default-selected-keys="['2']"
+          :style="{ lineHeight: '64px' }"
+        >
+          <a-icon
+            class="trigger"
+            :type="collapsed ? 'menu-unfold' : 'menu-fold'"
+            @click="() => (collapsed = !collapsed)"
+          />
+
+          <a-menu-item key="1">
+            nav 1
+          </a-menu-item>
+          <a-menu-item key="2">
+            nav 2
+          </a-menu-item>
+          <a-menu-item key="3">
+            nav 3
+          </a-menu-item>
+          <Person style="float: right;margin-right: 8px"></Person>
+        </a-menu>
       </a-layout-header>
       <a-layout-content
-        :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
+        :style="{padding:'8px', background: '#fff', minHeight: '280px' }"
       >
-        Content
+        <Tab></Tab>
       </a-layout-content>
     </a-layout>
   </a-layout>
 </template>
 <script>
+import Tab from './tab-page/tab-page'
+import Person from './components/person'
 export default {
+  components: {
+    Tab, Person
+  },
   data () {
     return {
       collapsed: false

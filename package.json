@@ -19,8 +19,7 @@
     "new:view": "node ./scripts/generateView"
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "lint-staged": {
     "src/*_/_.{js,vue}": [
@@ -35,6 +34,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
+    "ant-design-vue": "^1.7.2",
     "axios": "^0.18.0",
     "countup.js": "^1.9.3",
     "echarts": "^4.2.1",

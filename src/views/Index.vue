@@ -4,7 +4,6 @@
 
 <script>
 import Layout from '@/components/layout'
-import CcDrawer from '@/components/cc-drawer'
 import MenuConfig from '../config/menuConfig.js'
 import { mapActions, mapGetters } from 'vuex'
 
@@ -12,7 +11,6 @@ export default {
   name: 'main',
   components: {
     Layout,
-    CcDrawer
   },
   data () {
     return {
