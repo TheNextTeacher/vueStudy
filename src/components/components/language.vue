@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { SessionStorage } from '../../../utils'
+import { SessionStorage } from '../../utils'
 export default {
   name: 'language',
   data () {
